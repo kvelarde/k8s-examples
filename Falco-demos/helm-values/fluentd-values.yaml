@@ -1,0 +1,8 @@
+elasticsearch:
+  host: ["elasticsearch-master-headless:9200"]
+
+configMaps:
+  useDefaults:
+    systemInputConf: false
+    forward.input.conf: false
+    monitoring.conf: false
