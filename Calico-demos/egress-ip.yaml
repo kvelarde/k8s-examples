@@ -1,0 +1,15 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-backend-egress-external
+  namespace: backend
+spec:
+  podSelector:
+    matchLabels:
+      app: jenkins
+  egress:
+  - to:
+    - ipBlock:
+        cidr: 4.2.2.2/32
+    - ipBlock:
+        cidr: 8.8.8.8/32

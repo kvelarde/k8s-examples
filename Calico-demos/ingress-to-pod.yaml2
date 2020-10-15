@@ -1,0 +1,17 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  namespace: default
+  name: connect-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: hello-world-nodeport2
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: hello-world-nodeport1
+      ports:
+        - protocol: TCP
+          port: any

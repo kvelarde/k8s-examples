@@ -1,2 +1,4 @@
 # K8s examples for reference
-```(cd <example_dir> && make help)```
+```(cd Falico-demos && make help)```
+
+```(cd Calico-demos && make help)```
